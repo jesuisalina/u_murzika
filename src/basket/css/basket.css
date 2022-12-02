@@ -1,0 +1,11 @@
+input {
+    display: block;
+}
+
+.small {
+    width: 70px;
+}
+
+.ok {
+    background-color: aquamarine;
+}

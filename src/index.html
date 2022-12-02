@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>У Мурзика</title>
+    <style>
+        .icon {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .inline {
+            display: inline-block;
+        }
+        .center {
+            text-align: center;
+        }
+        .no-text-decoration {
+            text-decoration: none;
+            color: #39cc23;
+        }
+        button {
+            cursor: pointer;
+        }
+        .pointer {
+            cursor: pointer;
+        }
+        .ok {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body class="center">
+    <div id="header">
+        <div>
+            <h1 class="no-text-decoration inline pointer" id="main">МАГАЗИН "У МУРЗИКА"</h1>
+            <img class="inline icon" id="basket"  src="icons/shopping-cart.png" title="Ваша корзина"/>
+        </div>
+        <button class="ok"  id="fruits" title="Купить фрукты">Фрукты</button>
+        <button class="ok"  id="beverages" title="Купить напитки">Напитки</button>
+        <button class="ok"  id="inventory" title="Купить инвентарь">Инвентарь</button>
+    </div>
+    <div id="content">
+        <br>
+        <br>
+        <div>
+            <img src="img/lulu.jpeg" height="300" width="500" title="lulu">
+        </div>
+    </div>
+
+
+    <div id="basket-form" title="Корзина">
+        <table id="basket-items">
+            <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Количество</th>
+            </tr>
+            </thead>
+            <tbody id="basket-form-content">
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>

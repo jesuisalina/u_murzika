@@ -1,0 +1,30 @@
+<div class="center">
+    <h2>Фрукты</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Стоимость</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Яблоко</td>
+            <td>$ 100</td>
+            <td><button type="button" id="buy-apple" title="Купить">+</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#buy-apple').on('click', function () {
+            if (store.apple === undefined) {
+                store.apple = 1
+            } else {
+                store.apple = store.apple + 1
+            }
+        })
+    })
+</script>

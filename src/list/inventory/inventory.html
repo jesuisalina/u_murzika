@@ -1,0 +1,30 @@
+<div class="center">
+    <h2>Инвентарь</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Стоимость</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Скейт</td>
+            <td>$ 1000</td>
+            <td><button type="button" id="buy-skate" title="Купить">+</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#buy-skate').on('click', function () {
+            if (store.skate === undefined) {
+                store.skate = 1
+            } else {
+                store.skate = store.skate + 1
+            }
+        })
+    })
+</script>
