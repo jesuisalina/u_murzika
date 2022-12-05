@@ -28,5 +28,13 @@
                 store.apple = store.apple + 1
             }
         })
+        $('#buy-apple').on('click', function () {
+            if (cost.apple === undefined) {
+                cost.apple = 100
+            } else {
+                cost.apple = cost.apple + 100
+            }
+        })
     })
+
 </script>

@@ -28,5 +28,13 @@
                 store.skate = store.skate + 1
             }
         })
+        $('#buy-skate').on('click', function () {
+            if (cost.skate === undefined) {
+                cost.skate = 1000
+            } else {
+                cost.skate = cost.skate + 1000
+            }
+        })
     })
+
 </script>
