@@ -1,4 +1,5 @@
 const store = {}
+const cost = {}
 
 $(document).ready(function () {
 
@@ -27,25 +28,25 @@ $(document).ready(function () {
     })
 
     $('#basket').on('click', function (){
-        function row(name, value) {
-            return "<tr><td>" + name + "</td><td>" + value + "</td></tr>"
+        function row(name, value, cost) {
+            return "<tr><td>" + name + "</td><td>" + value + "</td><td>" + cost + "</td></tr>"
         }
 
         let content = ""
         $('#basket-form-content').html('')
         if (store.apple) {
-            let appleRow = row("Яблоки", store.apple)
+            let appleRow = row("Яблоки", store.apple, cost.apple)
             $('#basket-form-content').append(appleRow)
             // content = appleRow
         }
         if (store.juice) {
-            let juiceRow = row("Сок", store.juice)
+            let juiceRow = row("Сок", store.juice, cost.juice)
             $('#basket-form-content').append(juiceRow)
             // content = content + juiceRow
         }
 
         if (store.skate) {
-            let skateRow = row("Скейт", store.skate)
+            let skateRow = row("Скейт", store.skate, cost.skate)
             $('#basket-form-content').append(skateRow)
          //  content = content + skateRow
         }

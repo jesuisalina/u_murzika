@@ -28,5 +28,13 @@
         store.juice = store.juice + 1
       }
     })
+    $('#buy-juice').on('click', function () {
+      if (cost.juice === undefined) {
+        cost.juice = 100
+      } else {
+        cost.juice = cost.juice + 100
+      }
+    })
   })
+
 </script>
