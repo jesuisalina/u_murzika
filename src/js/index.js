@@ -1,6 +1,7 @@
 const store = {}
 const cost = {}
 
+
 $(document).ready(function () {
 
     const fruits = "#fruits"
@@ -54,7 +55,6 @@ $(document).ready(function () {
         // $('#basket-form-content').html(content)
 
 
-
         $('#basket-form').dialog("open")
 
 
@@ -73,6 +73,25 @@ $(document).ready(function () {
         if (store.apple > 0 || store.juice > 0 || store.skate > 0) {
             alert('Мяу мяу! Мурзик доволен :)')
         }*/
+
+        function total(sum) {
+            return "<tr><td>" + sum + "</td></tr>"
+        }
+        let appleTotal
+        if(cost.apple) {appleTotal = cost.apple} else {appleTotal = 0}
+
+        let juiceTotal
+        if (cost.juice) {juiceTotal = cost.juice} else {juiceTotal = 0}
+
+        let skateTotal
+        if (cost.skate) {skateTotal = cost.skate} else {skateTotal = 0}
+
+        let totalHtml = total(appleTotal + juiceTotal + skateTotal)
+        $('#sum-form-content').html(totalHtml)
     })
+
 })
+
+
+
 
