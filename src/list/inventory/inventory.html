@@ -11,12 +11,16 @@
         <tbody>
         <tr>
             <td>Скейт</td>
-            <td><img class="store-img" src="img/skate.png" title="skate"></td>
+            <td><img class="store-preview-img" id="skate-img" src="img/skate.png" title="skate"></td>
             <td>$ 1000</td>
             <td><button type="button" id="buy-skate" title="Купить">+</button></td>
         </tr>
         </tbody>
     </table>
+</div>
+
+<div class="center" id="img-modal-skate">
+    <img class="full-img" src="img/skate.png" title="skate">
 </div>
 
 <script>
@@ -35,6 +39,16 @@
                 cost.skate = cost.skate + 1000
             }
         })
+
+        $("#img-modal-skate").dialog({
+            autoOpen: false,
+            width: "auto"
+        });
+
+        $('#skate-img').on('click', function () {
+            $("#img-modal-skate").dialog("open")
+        })
+
     })
 
 </script>
