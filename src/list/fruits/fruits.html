@@ -11,12 +11,16 @@
         <tbody>
         <tr>
             <td>Яблоко</td>
-            <td><img class="store-img" src="img/apple.png" title="apples"></td>
+            <td><img class="store-preview-img" id="apple-preview-img" src="img/apple.png" title="apples"></td>
             <td>$ 100</td>
             <td><button type="button" id="buy-apple" title="Купить">+</button></td>
         </tr>
         </tbody>
     </table>
+</div>
+
+<div class="center" id="img-apple-modal">
+    <img class="full-img" src="img/apple.png">
 </div>
 
 <script>
@@ -35,6 +39,16 @@
                 cost.apple = cost.apple + 100
             }
         })
+
+        $("#img-apple-modal").dialog({
+            autoOpen: false,
+            width: "auto"
+        });
+
+        $('#apple-preview-img').on('click', function () {
+            $("#img-apple-modal").dialog("open")
+        })
     })
 
 </script>
+
