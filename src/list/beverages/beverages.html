@@ -11,7 +11,7 @@
     <tbody>
     <tr>
       <td>Сок</td>
-      <td><img class="store-preview-img" id="juice-img" src="img/juice.png" title="juice"></td>
+      <td><img class="store-preview-img" id="juice-preview-img" src="img/juice.png" title="juice"></td>
       <td>$ 100</td>
       <td><button type="button" id="buy-juice" title="Купить">+</button></td>
     </tr>
@@ -19,8 +19,7 @@
   </table>
 </div>
 
-<div class="center" id="img-beverages-modal">
-  <img class="full-img" src="img/juice.png" title="juice">
+<div class="center" id="img-juice-modal">
 </div>
 
 <script>
@@ -40,16 +39,19 @@
       }
     })
 
-    $("#img-beverages-modal").dialog({
+    $("#img-juice-modal").dialog({
       autoOpen: false,
       width: "auto"
     });
 
-    $('#juice-img').on('click', function () {
-      $("#img-beverages-modal").dialog("open")
+    $('#juice-preview-img').on('click', function () {
+      $("#img-juice-modal").html('<img class="full-img" src="img/juice.png">')
+      $("#img-juice-modal").dialog("open")
     })
 
-
+    $('#img-juice-modal').on('click', function () {
+      $("#img-juice-modal").html('<img class="full-img" src="img/juice2.png">')
+    })
 
   })
 

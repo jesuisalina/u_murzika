@@ -20,8 +20,8 @@
 </div>
 
 <div class="center" id="img-apple-modal">
-    <img class="full-img" src="img/apple.png">
 </div>
+
 
 <script>
     $(document).ready(function () {
@@ -45,9 +45,15 @@
             width: "auto"
         });
 
-        $('#apple-preview-img').on('click', function () {
-            $("#img-apple-modal").dialog("open")
+           $('#apple-preview-img').on('click', function () {
+               $("#img-apple-modal").html('<img class="full-img" src="img/apple.png">')
+               $("#img-apple-modal").dialog("open")
+           })
+
+        $('#img-apple-modal').on('click', function () {
+            $("#img-apple-modal").html('<img class="full-img" src="img/apple2.jpeg">')
         })
+
     })
 
 </script>
